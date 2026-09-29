@@ -1,0 +1,32 @@
+:root {
+  --bg: #f5f6fa; --card: #fff; --text: #1f2430; --muted: #6b7280;
+  --border: #e5e7eb; --accent: #4f46e5; --danger: #dc2626;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #12141a; --card: #1b1e27; --text: #e8eaf0; --muted: #9aa1b2; --border: #2a2e3a; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+header { padding: 24px 20px 8px; max-width: 1100px; margin: 0 auto; }
+h1 { margin: 0 0 16px; font-size: 26px; }
+.bar { display: flex; gap: 10px; flex-wrap: wrap; }
+.bar input { flex: 1; min-width: 200px; }
+main { max-width: 1100px; margin: 0 auto; padding: 12px 20px 40px; }
+.status { color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.card h3 { margin: 0; font-size: 18px; }
+.card .age { color: var(--muted); font-size: 13px; }
+.card p { margin: 0; font-size: 14px; word-break: break-word; }
+.card .note { background: var(--bg); border-radius: 8px; padding: 8px 10px; color: var(--muted); font-style: italic; margin-top: 4px; }
+.card .row { display: flex; gap: 8px; margin-top: 10px; }
+input, textarea, button { font: inherit; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); }
+button { cursor: pointer; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button.danger { color: var(--danger); border-color: var(--danger); background: transparent; }
+dialog { border: 1px solid var(--border); border-radius: 14px; background: var(--card); color: var(--text); width: min(460px, 92vw); padding: 20px; }
+dialog::backdrop { background: rgba(0,0,0,.5); }
+dialog h2 { margin-top: 0; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+label input, label textarea { color: var(--text); }
+.actions { display: flex; justify-content: flex-end; gap: 8px; }
